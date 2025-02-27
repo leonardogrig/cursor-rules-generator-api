@@ -1,4 +1,4 @@
-video: https://youtu.be/G2G2OuHU1Js
+video: https://www.youtube.com/watch?v=d4uQ_PEbdrM
 
 # Cursor Rules Generator API
 
