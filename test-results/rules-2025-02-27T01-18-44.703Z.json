@@ -1,0 +1,179 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "description": "Setup and Configuration and other best practices for axios",
+      "categories": [
+        {
+          "category": "Setup and Configuration",
+          "instructions": [
+            "Install Axios using npm or yarn: `npm install axios` or `yarn add axios`",
+            "Import Axios in your component: `import axios from 'axios';`",
+            "Create an Axios instance with custom settings using `axios.create()` for base URL and default headers."
+          ]
+        },
+        {
+          "category": "Making Requests",
+          "instructions": [
+            "Use `axios.get(url)` for GET requests and handle responses with `.then()` and `.catch()` for success and error handling.",
+            "For POST requests, use `axios.post(url, data)` to send data and handle responses similarly.",
+            "Utilize async/await syntax for cleaner asynchronous code: `const response = await axios.get(url);`"
+          ]
+        },
+        {
+          "category": "Error Handling",
+          "instructions": [
+            "Implement error handling in your requests using `.catch()` to manage errors gracefully.",
+            "Check for error response status and handle different scenarios: `if (error.response) { ... }`",
+            "Log errors for debugging purposes to understand issues better.",
+            "Use `.catch()` to handle errors in promise-based requests.",
+            "Implement error handling in `async/await` using try/catch blocks.",
+            "Log errors to the console for debugging: `console.error(error)` in the catch block.",
+            "Display user-friendly error messages in the UI based on the error response.",
+            "Consider using a global error handler for consistent error management across your application."
+          ]
+        },
+        {
+          "category": "Interceptors",
+          "instructions": [
+            "Use Axios interceptors to modify requests or responses globally before they are handled by `then` or `catch`.",
+            "Set up request interceptors to add authentication tokens or headers automatically.",
+            "Clean up interceptors when no longer needed to prevent memory leaks."
+          ]
+        },
+        {
+          "category": "Best Practices",
+          "instructions": [
+            "Encapsulate API calls in separate modules for better organization and reusability.",
+            "Use request cancellation to prevent unnecessary network traffic with `axios.CancelToken`.",
+            "Implement consistent error handling across your application to improve user experience.",
+            "Always set a base URL for your API requests to avoid repetition.",
+            "Use environment variables to manage API keys and sensitive information.",
+            "Implement request and response interceptors for logging and error handling.",
+            "Keep your Axios configuration centralized for easier maintenance.",
+            "Document your API endpoints and request/response structures for better collaboration."
+          ]
+        },
+        {
+          "category": "Installation",
+          "instructions": [
+            "Use npm or yarn to install Axios: `npm install axios` or `yarn add axios`"
+          ]
+        },
+        {
+          "category": "Making GET Requests",
+          "instructions": [
+            "Use `axios.get(url)` to retrieve data from a specified URL.",
+            "Handle responses with `.then()` and errors with `.catch()` to manage asynchronous operations."
+          ]
+        },
+        {
+          "category": "Making POST Requests",
+          "instructions": [
+            "Use `axios.post(url, data)` to send data to a server.",
+            "Ensure the data is in JSON format when sending."
+          ]
+        },
+        {
+          "category": "Adding Interceptors",
+          "instructions": [
+            "Use `axios.interceptors.request.use()` to modify requests globally.",
+            "Add common headers like Authorization in the interceptor."
+          ]
+        },
+        {
+          "category": "Handling Asynchronous Operations",
+          "instructions": [
+            "Use `axios.all()` to send multiple requests in parallel.",
+            "Utilize `axios.spread()` to handle responses from multiple requests."
+          ]
+        },
+        {
+          "category": "Authentication with Axios",
+          "instructions": [
+            "Include authentication headers in requests using the `headers` config.",
+            "Use bearer tokens for secure API access."
+          ]
+        },
+        {
+          "category": "Error Handling and Axios Instances",
+          "instructions": [
+            "Create Axios instances with custom configurations using `axios.create()`.",
+            "Set up response interceptors to handle different types of errors."
+          ]
+        },
+        {
+          "category": "General Usage",
+          "instructions": [
+            "Install axios using npm or yarn: `npm install axios` or `yarn add axios`",
+            "Use axios to send HTTP requests: `axios.get(url)` for GET requests, `axios.post(url, data)` for POST requests.",
+            "Handle responses using `.then()` for promises or `async/await` syntax for cleaner code.",
+            "Set custom headers for requests by passing an object as the second argument: `axios.get(url, { headers: { 'Authorization': 'Bearer token' } })`",
+            "Use interceptors to handle requests or responses globally before they are handled by `then` or `catch` methods."
+          ]
+        },
+        {
+          "category": "React Integration",
+          "instructions": [
+            "Use `componentDidMount` or `useEffect` to fetch data when the component mounts.",
+            "Store fetched data in the component's state to trigger re-renders when data changes.",
+            "Use hooks like `useState` and `useEffect` for functional components to manage state and side effects.",
+            "Pass data as props to child components for better data management and separation of concerns.",
+            "Consider using context or state management libraries for larger applications to manage global state."
+          ]
+        },
+        {
+          "category": "Code Style and Structure",
+          "instructions": [
+            "Keep your axios requests organized in a separate service file for better maintainability.",
+            "Use consistent naming conventions for your functions and variables.",
+            "Break down large components into smaller, reusable components to improve readability.",
+            "Document your code with comments to explain complex logic or decisions.",
+            "Follow a consistent code style guide (like Airbnb or Google) to maintain code quality."
+          ]
+        },
+        {
+          "category": "General Usage Tips",
+          "instructions": [
+            "Use Axios for making HTTP requests in both Node.js and browser environments.",
+            "Utilize the promise-based nature of Axios for handling asynchronous requests.",
+            "Leverage Axios interceptors for modifying requests and responses before they are handled.",
+            "Always handle errors using the .catch() method to avoid unhandled promise rejections.",
+            "Use the config object to customize requests with parameters, headers, and other options."
+          ]
+        },
+        {
+          "category": "Request Methods",
+          "instructions": [
+            "Use axios.get() for GET requests to retrieve data from a server.",
+            "Use axios.post() for POST requests to send data to a server.",
+            "Utilize axios.put() and axios.patch() for updating resources on the server.",
+            "Use axios.delete() to remove resources from the server.",
+            "Explore axios.all() and axios.spread() for handling multiple concurrent requests."
+          ]
+        },
+        {
+          "category": "Response Handling",
+          "instructions": [
+            "Check the response status code to determine the success of the request.",
+            "Access the response data through the 'data' property of the response object.",
+            "Utilize the 'headers' property to inspect the response headers returned by the server.",
+            "Log the response to the console for debugging purposes.",
+            "Handle different response types (JSON, text, etc.) based on your application needs."
+          ]
+        },
+        {
+          "category": "Testing and Debugging",
+          "instructions": [
+            "Write unit tests for your Axios requests using a testing framework like Jest.",
+            "Mock Axios requests in tests to avoid hitting the actual API.",
+            "Use console.log() to debug requests and responses during development.",
+            "Check for network errors and handle them gracefully in your application.",
+            "Utilize Chrome DevTools to inspect network requests made by Axios."
+          ]
+        }
+      ]
+    }
+  ]
+}

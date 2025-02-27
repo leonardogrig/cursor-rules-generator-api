@@ -1,0 +1,264 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "categories": [
+        {
+          "category": "Setup & Installation",
+          "instructions": [
+            "Install using npm: npm install axios",
+            "Configure with environment variables if needed",
+            "Install using yarn: yarn add axios",
+            "Install using bower: bower install axios",
+            "Include via jsDelivr CDN: <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>",
+            "Include via unpkg CDN: <script src='https://unpkg.com/axios/dist/axios.min.js'></script>",
+            "Install using pnpm: pnpm install axios",
+            "Set default base URL: axios.defaults.baseURL = 'https://api.example.com';",
+            "Set default headers: axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');",
+            "Configure with environment variables",
+            "Configure with environment variables for base URL and headers",
+            "Include via CDN jsDelivr: <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>",
+            "Include via CDN unpkg: <script src='https://unpkg.com/axios/dist/axios.min.js'></script>"
+          ]
+        },
+        {
+          "category": "Basic Usage",
+          "instructions": [
+            "Import the package with require() or import",
+            "Initialize with proper configuration using axios.create()",
+            "Initialize with proper configuration",
+            "Make GET requests using axios.get()",
+            "Make POST requests using axios.post()",
+            "Handle responses with .then() and .catch()",
+            "Import the package with import axios from 'axios';",
+            "Handle responses with .then() and errors with .catch()",
+            "Use async/await for cleaner asynchronous code.",
+            "Create an instance with axios.create() for custom configuration",
+            "Use instance methods like get, post, delete for API requests",
+            "Import the package using require(): const axios = require('axios');",
+            "Import the package using import: import axios from 'axios';",
+            "Initialize axios with default configuration: const instance = axios.create({ baseURL: 'https://api.example.com' });",
+            "Make a GET request: axios.get('/endpoint').then(response => console.log(response.data));",
+            "Make a POST request: axios.post('/endpoint', { data: 'value' }).then(response => console.log(response.data));"
+          ]
+        },
+        {
+          "category": "Making HTTP Requests",
+          "instructions": [
+            "Use axios.get() for GET requests",
+            "Use axios.post() for POST requests",
+            "Handle responses with .then() and .catch()",
+            "Pass headers and parameters as needed"
+          ]
+        },
+        {
+          "category": "TypeScript Integration",
+          "instructions": [
+            "Install TypeScript using npm: npm install typescript",
+            "Define types for your API responses",
+            "Use axios-typescript for type-safe requests",
+            "Define interfaces for request and response types",
+            "Use strict typing for better safety",
+            "Leverage type inference where possible",
+            "Install axios types with npm: npm install @types/axios",
+            "Use generics for type-safe API calls",
+            "Define interfaces for request and response data",
+            "Leverage type inference for cleaner code",
+            "Define proper interfaces for request and response types",
+            "Use generics for flexible API calls",
+            "Ensure compatibility with existing TypeScript code"
+          ]
+        },
+        {
+          "category": "Testing and Debugging",
+          "instructions": [
+            "Use Apidog for testing your API",
+            "Check response status and data",
+            "Log errors for debugging",
+            "Test different HTTP methods and endpoints",
+            "Use console.log to debug requests and responses",
+            "Write unit tests for your API calls",
+            "Mock axios requests in tests using libraries like jest",
+            "Check for error responses and handle them appropriately",
+            "Use Chrome DevTools to monitor network requests",
+            "Write unit tests using Jest",
+            "Test API responses for expected data",
+            "Use console logs for debugging",
+            "Run tests with npm run test",
+            "Integrate with CI/CD tools like CircleCI",
+            "Write unit tests for API calls using libraries like Jest",
+            "Mock axios requests in tests to avoid real API calls",
+            "Use Jest or Mocha for unit testing axios requests: test('fetches successfully data from an API', async () => { const response = await axios.get('/endpoint'); expect(response.data).toBeDefined(); });",
+            "Mock axios requests in tests using libraries like axios-mock-adapter: const mock = new MockAdapter(axios); mock.onGet('/endpoint').reply(200, { data: 'value' });",
+            "Check network requests in browser developer tools to debug issues: Open the Network tab and inspect requests made by axios.",
+            "Use console logs to trace request and response data during development: console.log('Request:', config); console.log('Response:', response);",
+            "Test error handling by simulating failed requests in tests: mock.onGet('/endpoint').reply(500);",
+            "Write unit tests for API calls",
+            "Mock API responses for testing",
+            "Use console.log() to debug requests and responses",
+            "Check for CORS issues in the browser console"
+          ]
+        },
+        {
+          "category": "Best Practices",
+          "instructions": [
+            "Keep your API endpoints organized",
+            "Use async/await for cleaner code",
+            "Handle errors gracefully",
+            "Document your API for better usability",
+            "Always handle errors gracefully",
+            "Keep your API calls organized",
+            "Use Axios instances for better configuration management",
+            "Keep configurations centralized",
+            "Use environment variables for sensitive data",
+            "Stay updated with Axios documentation"
+          ]
+        },
+        {
+          "category": "Interceptors",
+          "instructions": [
+            "Use axios.interceptors.request to modify requests before they are sent",
+            "Use axios.interceptors.response to handle responses globally",
+            "Implement error handling in interceptors",
+            "Log requests and responses for debugging",
+            "Cancel requests using interceptors",
+            "Use axios.interceptors.request.use() to modify requests before sending",
+            "Add authentication headers using interceptors",
+            "Transform response data using axios.interceptors.response.use()",
+            "Handle errors globally with interceptors.",
+            "Set up request interceptors to modify requests",
+            "Log request details using interceptors",
+            "Handle errors globally with response interceptors",
+            "Use interceptors to modify requests or responses: axios.interceptors.request.use(config => { /* modify config */ return config; });",
+            "Handle errors globally with response interceptors: axios.interceptors.response.use(response => response, error => { /* handle error */ return Promise.reject(error); });",
+            "Log requests and responses for debugging: axios.interceptors.request.use(request => { console.log('Starting Request', request); return request; });",
+            "Add authentication tokens to requests automatically: axios.interceptors.request.use(config => { config.headers['Authorization'] = 'Bearer token'; return config; });",
+            "Use interceptors to retry failed requests: axios.interceptors.response.use(null, error => { /* retry logic */ });"
+          ]
+        },
+        {
+          "category": "Follow Official Documentation",
+          "instructions": [
+            "Refer to official documentation for the latest features",
+            "Stay updated with the latest changes in the library",
+            "Follow recommended patterns for best practices",
+            "Check the GitHub repository for issues and discussions",
+            "Explore community examples and tutorials",
+            "Refer to official Axios documentation for updates",
+            "Stay informed about breaking changes in new releases",
+            "Refer to official documentation for updates",
+            "Stay updated with the latest changes",
+            "Follow recommended patterns and best practices",
+            "Explore examples provided in the documentation",
+            "Participate in community discussions for support"
+          ]
+        },
+        {
+          "category": "Error Handling",
+          "instructions": [
+            "Set a default timeout: axios.defaults.timeout = 5000;",
+            "Handle network errors and server errors in .catch()",
+            "Check for specific error codes like ECONNABORTED for timeouts",
+            "Display user-friendly error messages based on error type",
+            "Log errors for debugging purposes.",
+            "Use .catch() method to handle errors in promises",
+            "Use try...catch block for async/await error handling",
+            "Implement error handling using try-catch blocks",
+            "Use axios interceptors to handle errors globally",
+            "Log errors for debugging purposes",
+            "Use try-catch blocks with async/await for error handling: try { const response = await axios.get('/endpoint'); } catch (error) { console.error(error); }",
+            "Check for specific error codes in the catch block: if (error.response && error.response.status === 404) { console.log('Not Found'); }",
+            "Use axios's built-in error handling features: axios.get('/endpoint').catch(error => { console.error('Error:', error.message); });",
+            "Log errors to an external service for monitoring: axios.interceptors.response.use(null, error => { logErrorToService(error); return Promise.reject(error); });",
+            "Provide user feedback for errors: alert('An error occurred: ' + error.message);",
+            "Use try-catch blocks for async/await",
+            "Check response status codes for errors",
+            "Implement global error handling with interceptors",
+            "Provide user-friendly error messages"
+          ]
+        },
+        {
+          "category": "Cancelling Requests",
+          "instructions": [
+            "Use CancelToken to cancel requests: const source = axios.CancelToken.source();",
+            "Pass the cancel token to requests: { cancelToken: source.token }",
+            "Check if an error is a cancellation error with axios.isCancel()",
+            "Cancel requests when navigating away from a page",
+            "Use cancellation to prevent race conditions in API calls."
+          ]
+        },
+        {
+          "category": "Concurrent Requests",
+          "instructions": [
+            "Use axios.all() to make multiple requests simultaneously",
+            "Handle responses with axios.spread()",
+            "Optimize performance by fetching multiple datasets at once",
+            "Use Promise.all() for native promise handling",
+            "Combine results from multiple requests in a single response."
+          ]
+        },
+        {
+          "category": "Custom Instances",
+          "instructions": [
+            "Create custom Axios instances with axios.create()",
+            "Set different base URLs for different instances",
+            "Configure timeouts and headers for each instance",
+            "Use custom instances for different API services",
+            "Maintain clean and organized code with multiple instances."
+          ]
+        },
+        {
+          "category": "File Uploads",
+          "instructions": [
+            "Use FormData to upload files: const formData = new FormData();",
+            "Append files to FormData: formData.append('file', file);",
+            "Set Content-Type to multipart/form-data for file uploads",
+            "Handle file upload responses in .then()",
+            "Display success or error messages based on upload status."
+          ]
+        },
+        {
+          "category": "CORS Configuration",
+          "instructions": [
+            "Set up a proxy to bypass CORS issues",
+            "Use the proxy option in Axios requests",
+            "Configure Access-Control-Allow-Origin on the server",
+            "Test API requests from different domains",
+            "Handle CORS errors gracefully in the application."
+          ]
+        },
+        {
+          "category": "Query Parameters",
+          "instructions": [
+            "Include query parameters in GET requests using params option",
+            "Serialize objects to query strings automatically",
+            "Use arrays for multiple values of the same parameter",
+            "Handle complex query parameters easily",
+            "Log the final request URL for debugging."
+          ]
+        },
+        {
+          "category": "Making Requests",
+          "instructions": [
+            "Use GET requests to retrieve data from an API",
+            "Use POST requests to send data to an API",
+            "Use DELETE requests to remove data from an API",
+            "Use axios.get for GET requests",
+            "Use axios.post for POST requests",
+            "Utilize axios.all for concurrent requests",
+            "Handle responses with .then() and .catch()",
+            "Configure requests with additional options"
+          ]
+        },
+        {
+          "category": "React Integration",
+          "instructions": [
+            "Use useEffect() to fetch data when the component mounts",
+            "Use useState() to manage local state for fetched data"
+          ]
+        }
+      ]
+    }
+  ]
+}

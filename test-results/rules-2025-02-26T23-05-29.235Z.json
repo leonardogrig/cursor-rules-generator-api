@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "category": "axios Documentation Tips",
+      "instructions": [
+        "Always import axios at the top of your file",
+        "Check the documentation for the latest API changes",
+        "Use TypeScript with axios for better type checking",
+        "Consider using async/await with axios promises",
+        "Set up proper error handling when using axios"
+      ]
+    }
+  ]
+}

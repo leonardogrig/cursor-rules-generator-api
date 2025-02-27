@@ -1,0 +1,94 @@
+---
+description: n8n configuration and usage guidelines
+globs: 
+---
+
+# Code Standards
+
+- Follow defined code standards for readability and maintainability.
+- Use the n8n node linter to check for compliance before publishing.
+- Start new projects with the n8n node starter project for a recommended setup.
+- Write all n8n code in TypeScript to reduce bugs and speed up development.
+- Reuse internal parameter names to preserve user-entered data when switching operations.
+- Write all nodes in TypeScript to reduce bugs and speed up development.
+
+# Testing and Debugging
+
+- Ensure your node passes the linter's checks before publishing.
+- Test your node thoroughly to catch errors early in development.
+- Monitor performance metrics to identify bottlenecks.
+- Handle error scenarios gracefully to improve user experience.
+- Test workflows thoroughly to ensure all nodes function as expected.
+- Monitor performance metrics to identify bottlenecks in workflows.
+- Utilize console.log for debugging JavaScript code.
+- Test code snippets in a controlled environment before integrating them into workflows.
+- Monitor performance metrics when using Python due to slower execution.
+- Monitor performance metrics to identify potential issues.
+- Test your node thoroughly to catch any potential issues early.
+
+# Usage Guidelines
+
+- Never change incoming data; clone it if modifications are needed.
+- Use the built-in request library instead of third-party libraries to avoid unnecessary dependencies.
+- Implement clear and concise resource and operation parameters in your node.
+- Choose the appropriate mode: 'Run Once for All Items' or 'Run Once for Each Item'.
+- Utilize built-in methods and variables for efficient data handling.
+- Refer to the Code integrations page for examples and templates.
+- Use the Code node for custom JavaScript or Python execution in workflows.
+- Implement clear and consistent naming conventions for resources and operations.
+- Don't change incoming data; clone it if modifications are needed.
+- Implement clear and concise resource and operation parameters for better usability.
+
+# TypeScript Integration
+
+- Utilize strict typing for better safety and error detection.
+- Define proper interfaces for your node's data structures.
+- Leverage type inference to simplify your code.
+- Define proper interfaces for your nodes to ensure clarity and maintainability.
+- Leverage type inference where possible to simplify your code.
+- Define proper interfaces for your nodes to ensure consistency.
+
+# Code Usage
+
+- Utilize expressions to transform data in nodes using JavaScript and n8n's built-in methods.
+- Incorporate the Code node for adding JavaScript or Python to workflows.
+- Leverage core nodes for API requests, webhooks, and file handling.
+- Use nodes like If, Switch, and Merge to represent complex logic in workflows.
+
+# Best Practices
+
+- Self-host n8n to maintain control over your data.
+- Build custom nodes and publish them to npm for reuse.
+- Utilize the n8n API for programmatic access to tasks available in the GUI.
+- Avoid accessing the file system or making HTTP requests directly in the Code node.
+- Use external libraries only if self-hosting n8n; otherwise, rely on built-in modules.
+- Familiarize yourself with keyboard shortcuts for efficient coding.
+
+# Code Style and Structure
+
+- Maintain consistent code formatting for readability.
+- Comment code to explain complex logic and decisions.
+- Follow JavaScript or Python syntax conventions as applicable.
+- Use promises for asynchronous operations in JavaScript.
+- Leverage built-in methods for accessing workflow data efficiently.
+- Follow JavaScript or Python syntax rules as applicable.
+- Use Promises for asynchronous operations in JavaScript.
+- Implement proper error handling in your code to manage exceptions.
+- Maintain clean and readable code with comments and consistent formatting.
+
+# Debugging and Testing
+
+- Use console.log for debugging JavaScript code.
+- Test your code in the n8n environment before deploying it in workflows.
+- Monitor performance metrics to identify bottlenecks in your code execution.
+
+# Integration and Libraries
+
+- If self-hosting, enable external npm modules for additional functionality.
+- Use built-in Node.js modules like 'crypto' and 'moment' in n8n Cloud.
+- Understand the limitations of Python support in n8n, especially regarding package availability.
+
+# Keyboard Shortcuts
+
+- Familiarize yourself with keyboard shortcuts for autocompletion and code folding.
+- Utilize multiple cursors for efficient editing in the Code node.

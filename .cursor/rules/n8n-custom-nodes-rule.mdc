@@ -1,0 +1,43 @@
+---
+description: n8n-custom-nodes configuration and usage guidelines
+globs: 
+---
+
+# Code Standards
+
+- Follow defined code standards for readability and maintainability.
+- Use the n8n node linter to ensure compliance with node-building standards before publishing.
+- Start new projects with the n8n node starter project for a recommended setup and dependencies.
+- Write all n8n code in TypeScript to speed up development and reduce bugs.
+- Use the n8n node linter to ensure compliance with node-building standards.
+- Start new projects with the n8n node starter project for a recommended setup.
+- Reuse internal parameter names to preserve user-entered data when switching operations.
+
+# Node Development Best Practices
+
+- Do not change incoming data; clone it if modifications are necessary.
+- Use the built-in request library instead of third-party libraries to avoid additional dependencies and potential security issues.
+- Reuse internal parameter names to preserve user-entered data when switching operations.
+- Never change incoming data; clone it if modifications are needed.
+- Use the built-in request library instead of third-party libraries to avoid additional dependencies.
+- Implement detailed guidelines for writing nodes, focusing on resources and operations.
+- Ensure that only one field is visible to the user at a time when reusing internal names.
+
+# Node Structure and Parameters
+
+- Use 'Resource' and 'Operation' parameters for nodes that can perform multiple operations.
+- Ensure only one field is visible to the user at a time when reusing internal names for parameters.
+
+# Testing and Debugging
+
+- Test nodes thoroughly to ensure they handle all expected input scenarios correctly.
+- Monitor performance metrics to identify potential bottlenecks in node execution.
+- Test nodes thoroughly before publishing to ensure they meet standards.
+- Utilize the linter to catch common errors during development.
+- Monitor performance metrics to identify potential issues early.
+
+# TypeScript Integration
+
+- Use strict typing for better safety and error detection.
+- Define proper interfaces for node parameters and responses.
+- Leverage type inference to simplify code and improve readability.

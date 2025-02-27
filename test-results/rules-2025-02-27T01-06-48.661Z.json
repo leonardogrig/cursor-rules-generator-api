@@ -1,0 +1,361 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "@mendable/firecrawl-js",
+      "categories": [
+        {
+          "category": "Setup & Installation",
+          "instructions": [
+            "Install using npm: npm install @mendable/firecrawl-js",
+            "Set the API key as an environment variable named FIRECRAWL_API_KEY or pass it as a parameter to the FirecrawlApp class.",
+            "Install using npm: npm install @deepgram/sdk",
+            "Configure with environment variables for API key",
+            "Install using npm: npm install --save-dev @babel/plugin-syntax-typescript",
+            "Alternatively, use yarn: yarn add @babel/plugin-syntax-typescript --dev",
+            "Install using npm: npm install --save-dev @babel/preset-typescript",
+            "Alternatively, use yarn: yarn add @babel/preset-typescript --dev",
+            "Install using npm: npm install react-dnd",
+            "Ensure you have React and ReactDOM installed as dependencies.",
+            "Install using npm: npm install @typescript-eslint/utils",
+            "Ensure TypeScript and ESLint are installed in your project",
+            "Install using npm: npm install @brainstack/state",
+            "Ensure you have Node.js installed before running the installation command.",
+            "Install using npm: npm install @brainstack/tools",
+            "Ensure Node.js is installed on your machine",
+            "Install using npm: npm install --save-dev rollup-plugin-typescript-paths",
+            "Ensure your TypeScript project has a valid tsconfig.json file with path aliases defined.",
+            "Install using npm: npm install redux-form-yup",
+            "Create your yup schema to match the structure of your form values.",
+            "Install using npm: npm install react-icons",
+            "Install using yarn: yarn add react-icons",
+            "Install using npm: npm install monaco-editor-webpack-plugin",
+            "Configure Webpack with the MonacoWebpackPlugin in your webpack.config.js",
+            "Install using npm: npm install --save-dev @babel/core",
+            "Install using yarn: yarn add @babel/core --dev",
+            "Create a folder and make it your current working directory: mkdir my-app; cd my-app",
+            "Generate a fastify project with npm init: npm init fastify",
+            "Install dependencies: npm i",
+            "To start the app in dev mode: npm run dev",
+            "For production mode: npm start"
+          ]
+        },
+        {
+          "category": "Basic Usage",
+          "instructions": [
+            "Import the package with import FirecrawlApp from '@mendable/firecrawl-js';",
+            "Initialize with proper configuration: const app = new FirecrawlApp({apiKey: 'YOUR_API_KEY'});",
+            "Initialize with proper configuration: const app = new FirecrawlApp({apiKey: 'fc-YOUR_API_KEY'});",
+            "Initialize with your API key: const app = new FirecrawlApp({ apiKey: 'YOUR_API_KEY' });",
+            "Import the package with require() or import",
+            "Initialize with createClient using your API key",
+            "Import the package using require() or import statement in your JavaScript/TypeScript files.",
+            "Ensure that your Babel configuration includes the plugin to parse TypeScript syntax.",
+            "Import the package using require() or import statement in your TypeScript files",
+            "Configure Babel to use the preset in your Babel configuration file (babel.config.js)",
+            "Import the package using import { DndProvider } from 'react-dnd';",
+            "Wrap your application in the DndProvider to enable drag-and-drop functionality.",
+            "Import the package using require() or import statement",
+            "Configure Babel to use the preset in your Babel configuration file",
+            "Import the package with require() or import statement",
+            "Use the utilities provided to enhance ESLint functionality with TypeScript",
+            "Configure ESLint to use TypeScript parser",
+            "Import the createState function and State interface: import { createState, State } from '@brainstack/state';",
+            "Define your application state interface for type safety.",
+            "Initialize the state with createState and your initial state.",
+            "Import the plugin in your Rollup configuration: import { typescriptPaths } from 'rollup-plugin-typescript-paths';",
+            "Add the plugin to the Rollup plugins array: plugins: [typescriptPaths()],",
+            "Import asyncValidate and shouldAsyncValidate from redux-form-yup",
+            "Initialize your form with reduxForm, passing asyncValidate and shouldAsyncValidate as options.",
+            "Import the package with import { IconName } from 'react-icons/icon-library';",
+            "Initialize icons in your components as <IconName />.",
+            "Initialize the editor with proper configuration in index.js",
+            "Import the package with require('@babel/core') or import '@babel/core'",
+            "Initialize Babel with proper configuration settings",
+            "Import the package with require() or import: import Fastify from 'fastify' or const fastify = require('fastify')",
+            "Initialize with proper configuration: const fastify = Fastify({ logger: true })",
+            "Declare a route: fastify.get('/', (request, reply) => { reply.send({ hello: 'world' }) })",
+            "Run the server: fastify.listen({ port: 3000 }, (err, address) => { if (err) throw err })"
+          ]
+        },
+        {
+          "category": "Scraping a URL",
+          "instructions": [
+            "Use the scrapeUrl method to scrape a single URL: await app.scrapeUrl('https://example.com');",
+            "Handle errors with try/catch blocks to manage exceptions during scraping.",
+            "Use the scrapeUrl method to scrape a single URL: await app.scrapeUrl(url);",
+            "Handle errors with try/catch blocks when scraping."
+          ]
+        },
+        {
+          "category": "Crawling a Website",
+          "instructions": [
+            "Use the crawlUrl method to crawl a website: await app.crawlUrl('https://example.com');",
+            "Specify additional options like limit and formats in the params argument.",
+            "Use the crawlUrl method to crawl a website: await app.crawlUrl(crawlUrl, params);",
+            "Specify crawler options such as excludes, includes, and limit in the params."
+          ]
+        },
+        {
+          "category": "Asynchronous Crawling",
+          "instructions": [
+            "Use the crawlUrlAsync method for asynchronous crawling: await app.asyncCrawlUrl('https://example.com');",
+            "Check the status of the crawl job using the checkCrawlStatus method."
+          ]
+        },
+        {
+          "category": "Error Handling",
+          "instructions": [
+            "Handle errors returned by the Firecrawl API with descriptive error messages.",
+            "Use try/catch blocks to manage exceptions during requests.",
+            "Use try/catch blocks to handle errors during requests.",
+            "Check the status of a crawl job using checkCrawlStatus method.",
+            "Use try/catch blocks to handle errors during API requests.",
+            "Log error messages for better debugging.",
+            "Check for errors in API responses",
+            "Implement try-catch for async operations",
+            "Log errors for debugging"
+          ]
+        },
+        {
+          "category": "Scraping & Crawling",
+          "instructions": [
+            "Use scrapeUrl method to scrape a single URL: const scrapedData = await app.scrapeUrl('https://example.com');",
+            "Use crawlUrl method to crawl a website: const crawlResponse = await app.crawlUrl('https://firecrawl.dev', { limit: 100 });",
+            "Utilize asyncCrawlUrl for asynchronous crawling: const asyncCrawlResult = await app.asyncCrawlUrl('mendable.ai', { limit: 5 });"
+          ]
+        },
+        {
+          "category": "Batch Operations",
+          "instructions": [
+            "Batch scrape multiple URLs with batchScrapeUrls method: const batchScrapeResponse = await app.batchScrapeUrls(['url1', 'url2']);",
+            "Use asyncBatchScrapeUrls for asynchronous batch scraping."
+          ]
+        },
+        {
+          "category": "Running Locally",
+          "instructions": [
+            "Change the API URL for local testing: const app = new FirecrawlApp({ apiKey: 'YOUR_API_KEY', apiUrl: 'http://localhost:3002' });",
+            "Ensure your local server is running before making requests."
+          ]
+        },
+        {
+          "category": "Transcription",
+          "instructions": [
+            "Use transcribeUrl for remote files",
+            "Use transcribeFile for local files",
+            "Implement live transcription with dgConnection"
+          ]
+        },
+        {
+          "category": "Configuration",
+          "instructions": [
+            "Set global defaults for API calls",
+            "Use namespace-specific configurations for detailed control",
+            "Override fetch transmitter for custom HTTP clients",
+            "Add the plugin to your Babel configuration file (babel.config.js or .babelrc).",
+            "Specify any additional options required for TypeScript parsing if necessary.",
+            "Set up your ESLint configuration file to include TypeScript support",
+            "Define rules specific to TypeScript in your ESLint config",
+            "Utilize the provided utilities to create custom ESLint rules",
+            "Use IconContext.Provider to set global properties for icons.",
+            "Specify color and size using the context API.",
+            "Create a .babelrc file for configuration",
+            "Specify presets and plugins in the configuration file"
+          ]
+        },
+        {
+          "category": "Testing & Debugging",
+          "instructions": [
+            "Use console.log to debug responses",
+            "Write unit tests for your integration",
+            "Monitor performance metrics during transcription"
+          ]
+        },
+        {
+          "category": "Testing and Debugging",
+          "instructions": [
+            "Test your TypeScript code to ensure it compiles correctly with Babel.",
+            "Use tools like Jest or Mocha for unit testing your TypeScript code.",
+            "Write unit tests to ensure your TypeScript code behaves as expected",
+            "Use Babel's source maps for easier debugging of transpiled code",
+            "Test your setup with different TypeScript configurations to ensure compatibility",
+            "Use React Testing Library to test drag-and-drop interactions.",
+            "Check for accessibility issues in your drag-and-drop components.",
+            "Write unit tests to ensure your TypeScript code compiles correctly",
+            "Use TypeScript's built-in type checking to catch errors early",
+            "Run ESLint to check for TypeScript errors in your code",
+            "Use the debugging tools in your IDE to troubleshoot ESLint issues",
+            "Write tests for custom ESLint rules using the utilities provided",
+            "Test your Rollup build to ensure path aliases are resolved correctly.",
+            "Check for any errors in the console during the build process to troubleshoot issues.",
+            "Use Babel's built-in error messages to troubleshoot issues",
+            "Test your code with different JavaScript versions to ensure compatibility"
+          ]
+        },
+        {
+          "category": "Follow Official Documentation",
+          "instructions": [
+            "Refer to the official documentation for detailed usage instructions.",
+            "Stay updated with the latest version and changes in the plugin.",
+            "Refer to the official documentation for detailed setup instructions",
+            "Stay updated with the latest version changes and features",
+            "Check the GitHub repository for issues and community support",
+            "Refer to the official documentation for detailed usage instructions",
+            "Stay updated with the latest version changes and best practices",
+            "Stay updated with the latest changes and best practices",
+            "Refer to the official documentation for detailed usage",
+            "Stay updated with the latest changes and best practices.",
+            "Refer to the official Babel documentation for detailed guides"
+          ]
+        },
+        {
+          "category": "TypeScript Integration",
+          "instructions": [
+            "Ensure TypeScript is installed in your project",
+            "Use the preset in conjunction with other Babel presets for optimal compatibility",
+            "Leverage TypeScript's type checking alongside Babel's transpilation",
+            "Use the preset in your Babel configuration to enable TypeScript support",
+            "Use the bundled types for redux-form-yup",
+            "Install types for yup and redux-form from @types/yup and @types/redux-form.",
+            "Remove @types/react-icons as it now has native TypeScript support.",
+            "Use strict typing for better safety."
+          ]
+        },
+        {
+          "category": "Creating Drag Sources",
+          "instructions": [
+            "Define a drag source using the useDrag hook.",
+            "Specify the type of item being dragged and the item data."
+          ]
+        },
+        {
+          "category": "Creating Drop Targets",
+          "instructions": [
+            "Define a drop target using the useDrop hook.",
+            "Handle the drop event to manage the dropped item."
+          ]
+        },
+        {
+          "category": "State Management",
+          "instructions": [
+            "Use the mutate function to update the state: state.mutate(currentState => { return { ...currentState, count: currentState.count + 1 }; });",
+            "Retrieve the current state using state.getState().",
+            "Consider using selector functions to get specific values from the state."
+          ]
+        },
+        {
+          "category": "Contributing",
+          "instructions": [
+            "Fork the repository to make changes.",
+            "Create a new branch for your changes and commit with descriptive messages.",
+            "Submit a pull request for review.",
+            "Follow the build script to contribute to the project.",
+            "Check discussions for adding new icon sets.",
+            "Follow the Contributor License Agreement (CLA) for contributions",
+            "Adhere to the Microsoft Open Source Code of Conduct"
+          ]
+        },
+        {
+          "category": "Best Practices",
+          "instructions": [
+            "Keep your state management logic separate from UI components.",
+            "Use TypeScript for better type safety and code clarity.",
+            "Regularly check for updates to the package for new features and fixes.",
+            "Avoid using this plugin if you are already using rollup-plugin-typescript.",
+            "Keep your tsconfig.json organized and ensure paths are correctly set for better maintainability."
+          ]
+        },
+        {
+          "category": "Creating a New Tool",
+          "instructions": [
+            "Create a new file for your tool, e.g. MyTool.ts",
+            "Import the BaseTool class from @brainstack/tools",
+            "Extend the BaseTool class and implement the required abstract methods"
+          ]
+        },
+        {
+          "category": "Using Your Tool",
+          "instructions": [
+            "Create an object containing instances of different tools",
+            "Pass the tools object to the askWithTool method along with user input and context",
+            "Handle the AI response appropriately"
+          ]
+        },
+        {
+          "category": "Configuration Management",
+          "instructions": [
+            "Use saveConfig() to store configuration values",
+            "Use readConfig() to retrieve configuration values",
+            "Implement loadConfig() to load configurations from external sources"
+          ]
+        },
+        {
+          "category": "OpenAI Chat Completion",
+          "instructions": [
+            "Utilize the definition property to get the OpenAI Chat Completion model definition",
+            "Ensure all required parameters are defined in your tool",
+            "Test the tool's execution with various input parameters"
+          ]
+        },
+        {
+          "category": "Configuration Options",
+          "instructions": [
+            "Use the 'absolute' option to resolve to absolute paths; defaults to true.",
+            "Set 'tsConfigPath' to specify a custom path to your tsconfig.json if needed.",
+            "Use options like filename and publicPath to customize worker scripts",
+            "Select specific languages and features to reduce bundle size"
+          ]
+        },
+        {
+          "category": "Async/Await & Promises",
+          "instructions": [
+            "Ensure Promise is available in your environment for async validation",
+            "Consider using es6-promise for older browsers."
+          ]
+        },
+        {
+          "category": "Migrating from version 2 to 3",
+          "instructions": [
+            "Change import style from old to new format.",
+            "Adjust CSS for vertical alignment as it is not automatically set."
+          ]
+        },
+        {
+          "category": "Version Compatibility",
+          "instructions": [
+            "Check the version matrix to ensure compatibility between monaco-editor and monaco-editor-webpack-plugin",
+            "Update both packages together to avoid issues"
+          ]
+        },
+        {
+          "category": "Performance Optimization",
+          "instructions": [
+            "Minimize the number of plugins used to speed up the build process",
+            "Use caching to improve compilation speed"
+          ]
+        },
+        {
+          "category": "Core Features",
+          "instructions": [
+            "Highly performant: Fastify can serve up to 76+ thousand requests per second",
+            "Extensible: Fully extensible via hooks, plugins, and decorators",
+            "Schema based: Use JSON Schema to validate routes and serialize outputs",
+            "Logging: Use Pino for efficient logging",
+            "Developer friendly: Built to be expressive and help developers without sacrificing performance"
+          ]
+        },
+        {
+          "category": "Documentation & Support",
+          "instructions": [
+            "Refer to the official documentation for detailed guides and references",
+            "Check the Getting Started guide for initial setup",
+            "Utilize the Testing guide for writing tests",
+            "Join the Discord community for support and discussions",
+            "Stay updated with the latest changes and best practices"
+          ]
+        }
+      ]
+    }
+  ]
+}

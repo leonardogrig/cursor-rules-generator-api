@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "category": "axios Documentation Tips",
+      "instructions": [
+        "Use the axios client to make HTTP requests in JavaScript/TypeScript applications",
+        "Create instances with custom configurations using axios.create()",
+        "Handle errors with try/catch when using async/await or .catch() with promises",
+        "Set default headers with axios.defaults.headers or in instance config",
+        "Use interceptors to handle requests or responses globally"
+      ]
+    }
+  ]
+}

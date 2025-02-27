@@ -1,0 +1,35 @@
+---
+description: firecrawl configuration and usage guidelines
+globs: 
+---
+
+# General Usage Tips
+
+- Utilize the AI-powered extraction feature to minimize manual configuration.
+- Leverage natural language descriptions for selectors to enhance flexibility.
+- Be aware of API rate limits to avoid service interruptions.
+- Implement error handling to manage failed requests gracefully.
+
+# Testing and Debugging
+
+- Thoroughly test scraping scripts on various websites to ensure reliability.
+- Use logging to track scraping operations and identify issues.
+- Incorporate retries for failed requests to improve robustness.
+
+# Performance Optimization
+
+- Use the Batch Scrape endpoint for concurrent requests to enhance performance.
+- Optimize request parameters to control crawling depth and manage load.
+- Monitor performance metrics to identify bottlenecks in scraping operations.
+
+# Security Best Practices
+
+- Store API keys securely in environment variables or configuration files.
+- Avoid hard-coding sensitive information in scripts to prevent exposure.
+- Regularly review and update security measures to protect data integrity.
+
+# Data Management
+
+- Validate and clean extracted data before storage or further processing.
+- Utilize libraries like pandas for data transformation and normalization.
+- Implement monitoring to ensure data accuracy over time.

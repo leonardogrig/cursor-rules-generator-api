@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "category": "Axios",
+      "instructions": [
+        "Use Axios interceptors to handle requests and responses globally, allowing for centralized error handling and request modification.",
+        "Utilize async/await syntax for cleaner and more readable asynchronous code when making API calls with Axios.",
+        "Implement error handling in a single place using interceptors to avoid repetitive catch blocks in every request.",
+        "Leverage the `validateStatus` option to customize which HTTP status codes should be treated as errors, allowing for more granular control over error handling.",
+        "Use `Promise.all` for concurrent requests to optimize performance when making multiple API calls."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+---
+description: shadcnui configuration and usage guidelines
+globs: 
+---
+
+# Accessibility
+
+- Implement ARIA labels
+- Ensure sufficient color contrast
+- Support screen readers
+- Add keyboard shortcuts
+
+# Testing and Debugging
+
+- Use Chrome DevTools effectively
+- Write unit and integration tests
+- Test cross-browser compatibility
+- Monitor performance metrics
+- Handle error scenarios
+
+# TypeScript Integration
+
+- Use strict typing for better safety
+- Define proper interfaces
+- Leverage type inference where possible
+
+# Form Design Best Practices
+
+- Ensure forms are well-structured and semantically correct
+- Provide client and server-side validation
+- Use consistent styling across the application
+- Make forms easy to navigate with keyboard support
+- Utilize controlled components for better state management
+
+# Usage Guidelines
+
+- Use the `useForm` hook from `react-hook-form` to create forms
+- Define a form schema using Zod for validation
+- Utilize the `<FormField>` component for controlled fields
+- Handle form submission with type-safe values
+- Ensure accessibility features are implemented in form components

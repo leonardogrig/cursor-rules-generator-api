@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Simple table for messages
+model Message {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+}
+
+// Package documentation rules with categorized instructions
+model PackageRule {
+  id          Int                   @id @default(autoincrement())
+  packageName String                @unique
+  description String                @default("Package usage tips and best practices")
+  categories  InstructionCategory[]
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+}
+
+// Category of instructions
+model InstructionCategory {
+  id            Int         @id @default(autoincrement())
+  name          String
+  instructions  String[]
+  packageRule   PackageRule @relation(fields: [packageRuleId], references: [id], onDelete: Cascade)
+  packageRuleId Int
+
+  @@index([packageRuleId])
+}

@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "category": "Axios",
+      "instructions": [
+        "Use Axios for making HTTP requests with a simple and consistent API.",
+        "Utilize interceptors to handle requests and responses globally, allowing for easier error handling and request modification.",
+        "Implement error handling by checking the response status and using the `catch` method to manage errors gracefully.",
+        "Leverage async/await syntax for cleaner asynchronous code, making it easier to read and maintain.",
+        "Optimize performance by using `Promise.all` for concurrent requests, allowing multiple API calls to be made simultaneously."
+      ]
+    }
+  ]
+}

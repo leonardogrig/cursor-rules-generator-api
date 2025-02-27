@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "axios",
+      "category": "axios Documentation Tips",
+      "instructions": [
+        "Always import axios at the top of your file",
+        "Check the documentation for the latest API changes",
+        "Use TypeScript with axios for better type checking",
+        "Consider using async/await with axios promises",
+        "Set up proper error handling when using axios"
+      ]
+    },
+    {
+      "packageName": "express",
+      "category": "express Documentation Tips",
+      "instructions": [
+        "Always import express at the top of your file",
+        "Check the documentation for the latest API changes",
+        "Use TypeScript with express for better type checking",
+        "Consider using async/await with express promises",
+        "Set up proper error handling when using express"
+      ]
+    },
+    {
+      "packageName": "react",
+      "category": "react Documentation Tips",
+      "instructions": [
+        "Always import react at the top of your file",
+        "Check the documentation for the latest API changes",
+        "Use TypeScript with react for better type checking",
+        "Consider using async/await with react promises",
+        "Set up proper error handling when using react"
+      ]
+    },
+    {
+      "packageName": "typescript",
+      "category": "typescript Documentation Tips",
+      "instructions": [
+        "Always import typescript at the top of your file",
+        "Check the documentation for the latest API changes",
+        "Use TypeScript with typescript for better type checking",
+        "Consider using async/await with typescript promises",
+        "Set up proper error handling when using typescript"
+      ]
+    },
+    {
+      "packageName": "@typescript-eslint/parser",
+      "category": "parser Documentation Tips",
+      "instructions": [
+        "Always import parser at the top of your file",
+        "Check the documentation for the latest API changes",
+        "Use TypeScript with parser for better type checking",
+        "Consider using async/await with parser promises",
+        "Set up proper error handling when using parser"
+      ]
+    }
+  ]
+}

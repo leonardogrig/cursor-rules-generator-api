@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": [
+    {
+      "packageName": "@mendable/firecrawl-js",
+      "category": "@mendable/firecrawl-js",
+      "instructions": [
+        "Install the SDK using npm: `npm install @mendable/firecrawl-js`",
+        "Obtain an API key from firecrawl.dev and set it as an environment variable named `FIRECRAWL_API_KEY` or pass it directly to the `FirecrawlApp` class.",
+        "Use `scrapeUrl` method to scrape a single URL, ensuring to handle errors with try/catch blocks.",
+        "For crawling, use the `crawlUrl` method with appropriate parameters to specify limits and formats, and check for errors in the response.",
+        "Utilize the `checkCrawlStatus` method to monitor the status of your crawl jobs, passing the job ID as a parameter."
+      ]
+    }
+  ]
+}
