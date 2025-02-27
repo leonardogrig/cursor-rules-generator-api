@@ -1,3 +1,5 @@
+video: https://youtu.be/G2G2OuHU1Js
+
 # Cursor Rules Generator API
 
 A Node.js API service that generates rules for packages based on their documentation. The API scrapes documentation using Firecrawl and stores the results in a PostgreSQL database.
