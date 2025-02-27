@@ -1,0 +1,343 @@
+---
+description: express configuration and usage guidelines
+globs: 
+---
+
+# Project Structure
+
+- Organize your project structure for better readability and maintainability.
+- Use a consistent pattern for organizing routes, controllers, and middleware.
+- Implement modular routing to keep route definitions organized.
+- Organize your project into clear folders like src and test.
+- Use subfolders for configs, controllers, middlewares, routes, models, services, and utils.
+- Maintain a consistent naming convention for files and folders.
+
+# Middleware Usage
+
+- Use middleware for handling requests, responses, and errors efficiently.
+- Implement authentication, logging, and error handling middleware.
+- Centralize error handling to ensure consistent error responses.
+- Use middleware functions for logging, data validation, and error handling.
+- Define middleware in the order they should be executed.
+- Keep route handlers focused on specific tasks by using middleware.
+- Use middleware for authentication and logging to keep routes clean.
+- Implement error handling middleware to manage errors centrally.
+- Leverage third-party middleware for common tasks like body parsing and CORS.
+- Use app.use() to mount middleware functions at the application level.
+- Ensure middleware functions call next() to pass control to the next middleware.
+- Use router.use() for middleware specific to a router instance.
+- Define error-handling middleware with four parameters: (err, req, res, next).
+- Utilize express.static for serving static files efficiently.
+
+# Performance Optimization
+
+- Implement caching to improve performance.
+- Minimize response times by using asynchronous operations.
+- Optimize your application for efficient performance.
+- Use gzip compression to decrease response body size and increase speed.
+- Avoid synchronous functions to prevent blocking the event loop.
+- Implement proper logging using asynchronous logging libraries like Pino.
+- Handle exceptions properly to prevent app crashes.
+- Use compression middleware to reduce response sizes
+- Implement caching strategies for frequently accessed data
+- Optimize middleware order for performance.
+- Minimize middleware usage to improve response times.
+- Use caching strategies for frequently accessed data.
+- Optimize database queries to reduce load times.
+- Use async/await syntax for handling promises
+- Avoid using process.nextTick() for handling asynchronous tasks
+- Use middleware functions to separate concerns and improve code organization
+- Avoid using global variables and instead use modules and exports
+- Keep dependencies up to date to prevent vulnerabilities
+- Use compression middleware to reduce response sizes.
+- Implement caching strategies for static assets and API responses.
+- Optimize database queries to reduce response times.
+- Use caching strategies to reduce response times for frequently accessed data.
+- Optimize middleware usage to minimize overhead.
+- Implement compression for responses to reduce payload size.
+- Monitor performance metrics to identify bottlenecks.
+- Use clustering to take advantage of multi-core systems.
+- Use compression middleware to reduce the size of response bodies and improve load times.
+- Implement caching strategies for static assets to enhance performance.
+- Optimize database queries to minimize response times and server load.
+- Optimize database queries to improve response times.
+
+# Coding Conventions
+
+- Follow coding conventions and style guides for consistency.
+- Use tools like ESLint for JavaScript linting and Prettier for code formatting.
+- Adhere to best practices for writing clean and maintainable code.
+
+# Testing
+
+- Write unit tests for routes, controllers, and middleware to ensure expected behavior.
+- Use testing frameworks like Mocha and Chai for effective testing.
+- Monitor performance metrics to identify potential issues.
+
+# Environment Setup
+
+- Set NODE_ENV to 'production' for performance improvements.
+- Ensure your app automatically restarts using a process manager.
+- Run your app in a cluster to utilize multi-core systems effectively.
+- Cache request results to improve response times.
+- Use a load balancer to distribute traffic across multiple instances.
+
+# Error Handling
+
+- Use try-catch for synchronous code to handle exceptions gracefully.
+- Utilize promises for asynchronous error handling in middleware.
+- Avoid using uncaughtException to prevent unreliable app states.
+- Implement centralized error handling middleware
+- Use res.status() to set appropriate HTTP status codes
+- Log errors for debugging purposes.
+- Implement error-handling middleware to catch and respond to errors.
+- Use the `next` function to pass errors to the error-handling middleware.
+- Provide meaningful error messages to clients.
+- Always define error-handling middleware with four parameters.
+- Log errors for debugging purposes in error-handling middleware.
+- Send appropriate HTTP status codes in response to errors.
+- Use next('route') to skip to the next route in middleware stacks.
+- Handle specific error types distinctly for better clarity.
+
+# Code Structure
+
+- Keep your application stateless to facilitate clustering and scaling.
+- Use middleware effectively to handle requests and errors.
+
+# Installation and Setup
+
+- Use npm to install Express: npm install express
+- Initialize a new Node.js project with npm init -y
+- Ensure your project structure is organized with a clear entry point.
+
+# Routing and Middleware
+
+- Define routes using app.get(), app.post(), etc.
+- Use middleware functions to handle requests and responses
+- Organize middleware for better readability and maintainability.
+
+# Request and Response Management
+
+- Use req.body to access POST data after parsing with express.json() or express.urlencoded()
+- Utilize res.json() to send JSON responses
+- Manage cookies with res.cookie() and res.clearCookie().
+
+# Input Validation and Sanitization
+
+- Use express-validator for validating input data
+- Sanitize inputs to prevent XSS and SQL injection
+- Implement custom validation logic as needed.
+
+# Session Management
+
+- Use express-session for session management
+- Store session data securely on the server
+- Configure session options like secret and expiration.
+
+# Static Files and Assets
+
+- Serve static files using express.static()
+- Organize static assets in a dedicated public directory
+- Ensure proper caching headers for static assets.
+
+# Best Practices
+
+- Keep your code modular and organized
+- Use environment variables for configuration
+- Document your API endpoints and middleware usage.
+- Keep middleware functions small and focused on a single task.
+- Avoid blocking the event loop in middleware functions.
+- Use async/await for handling asynchronous operations in middleware.
+- Document middleware functions for clarity and maintainability.
+- Test middleware functions independently to ensure reliability.
+
+# Middleware Best Practices
+
+- Always call next() to pass control to the next middleware function.
+- Use middleware to modify request and response objects as needed.
+- Load middleware in the correct order to ensure proper execution flow.
+- Handle errors in middleware by passing them to next() with an error object.
+- Use async/await in middleware for handling asynchronous operations.
+
+# Configurable Middleware
+
+- Export middleware as a function that accepts options for customization.
+- Return a middleware function based on the provided options.
+- Use configurable middleware to adapt behavior based on runtime parameters.
+
+# Logging and Monitoring
+
+- Implement logging middleware to track requests and responses.
+- Use middleware to monitor performance metrics and request times.
+- Log errors in middleware to facilitate debugging.
+
+# Cookie and Session Management
+
+- Use cookie-parser middleware to handle cookies easily.
+- Validate cookies in middleware before processing requests.
+- Implement session management middleware for user authentication.
+
+# Modularization
+
+- Break down your application’s code into smaller, manageable, and reusable modules.
+- Separate different concerns of your application into distinct files or folders.
+- Keep your main application file clean and focused on overall setup.
+
+# Environmental Variables
+
+- Use environment variables to manage configuration for different environments.
+- Utilize packages like `dotenv` to load environment variables from a `.env` file.
+- Access environment variables using `process.env`.
+
+# Data Validation
+
+- Implement data validation middleware to check incoming data.
+- Use appropriate status codes for invalid data (e.g., 400 for bad requests).
+- Attach validated data to the request object for use in route handlers.
+
+# Security
+
+- Validate input to prevent SQL injection and XSS attacks.
+- Implement authentication and authorization for user access control.
+- Use HTTPS for secure communication.
+
+# File Uploads
+
+- Use middleware like `multer` to handle file uploads easily.
+- Define storage options for uploaded files.
+- Ensure proper validation and error handling for file uploads.
+
+# Async/Await Usage
+
+- Use `async/await` for cleaner asynchronous code.
+- Avoid callback hell by using `async/await` for promise handling.
+- Ensure your Node.js version supports `async/await`.
+
+# Database Queries
+
+- Use connection pools for efficient database management.
+- Perform CRUD operations using prepared statements to prevent SQL injection.
+- Handle database errors gracefully.
+
+# Unit Testing
+
+- Write unit tests for critical parts of your application.
+- Use frameworks like Mocha and Chai for testing.
+- Incorporate tools like Supertest for HTTP request testing.
+
+# Routing Best Practices
+
+- Group routes by resource type and version for clarity.
+- Use route parameters and query strings effectively for dynamic routing.
+- Implement route-specific middleware for additional security and validation.
+
+# Testing and Debugging
+
+- Write unit tests for each module to ensure functionality.
+- Use integration tests to verify interactions between components.
+- Utilize tools like Jest for testing and debugging.
+- Use a testing framework like Jest or Mocha to write unit tests and integration tests
+- Test for expected behavior and error handling
+- Use mocking libraries to isolate dependencies and make tests more efficient
+- Use a testing database to simulate real-world data and test scenarios
+- Use a debugger like Chrome DevTools or Node.js Inspector to step through code and inspect variables
+- Write unit tests for individual components and middleware.
+- Use integration tests to ensure different parts of the application work together.
+- Utilize tools like Mocha or Jest for testing frameworks.
+- Implement logging to capture errors and application flow.
+- Use debugging tools like Node.js inspector for troubleshooting.
+- Use tools like Mocha or Jest for unit testing your Express application.
+- Implement logging with middleware like morgan to track requests and responses for debugging.
+- Test your API endpoints with tools like Postman or Insomnia to ensure they behave as expected.
+- Write unit tests for your middleware and route handlers using frameworks like Mocha or Jest.
+- Use tools like Postman or Insomnia for testing your API endpoints.
+- Implement logging to capture request and error information for debugging.
+- Use a debugger or console logs to trace issues during development.
+- Write unit tests for your route handlers and middleware.
+- Use tools like Postman or Insomnia for API testing.
+- Implement logging to track application behavior and errors.
+
+# Security Best Practices
+
+- Validate user input to prevent SQL injection and cross-site scripting (XSS) attacks
+- Use HTTPS to encrypt data in transit
+- Implement authentication and authorization mechanisms to restrict access to sensitive data
+- Keep dependencies up to date to prevent vulnerabilities
+- Validate and sanitize user input to prevent injection attacks.
+- Use helmet middleware to set various HTTP headers for security.
+- Implement rate limiting to protect against DDoS attacks.
+
+# Code Organization
+
+- Use a consistent directory structure and naming conventions
+- Organize code into separate modules and files for each feature or concern
+- Use a code linter and formatter to enforce coding standards
+- Use a version control system to track changes and collaborate with others
+
+# Middleware Types
+
+- Differentiate between application-level and router-level middleware.
+- Use built-in middleware like express.static for serving static assets.
+- Incorporate third-party middleware for additional functionalities.
+- Understand the role of error-handling middleware in the request-response cycle.
+- Group related middleware functions for better organization.
+
+# Architecture and Best Practices
+
+- Use middleware for common tasks like logging and authentication.
+- Organize routes in separate files for better maintainability.
+- Implement error handling middleware to catch errors globally.
+- Use environment variables for configuration settings.
+- Use middleware for handling requests and responses effectively.
+- Organize routes logically to enhance maintainability.
+- Implement proper error handling to manage exceptions gracefully.
+- Follow RESTful principles for API design.
+- Utilize environment variables for configuration management.
+- Organize your Express app into a modular structure with separate files for routes, middleware, and controllers.
+- Use environment variables for configuration settings to keep sensitive information secure.
+- Implement error handling middleware to catch and respond to errors gracefully.
+- Organize your application into a modular structure with clear separation of concerns.
+- Use middleware for cross-cutting concerns like logging and authentication.
+- Implement error handling middleware to manage errors gracefully.
+- Utilize environment variables for configuration settings.
+- Organize your Express application using a modular structure.
+- Use middleware for common tasks like logging and error handling.
+- Implement a consistent error handling strategy across your application.
+
+# Usage Guidelines
+
+- Use async/await for handling asynchronous code to improve readability.
+- Avoid using deprecated features of Express to ensure compatibility with future versions.
+- Use the latest stable version of Express for security and performance improvements.
+- Leverage built-in middleware for common tasks like parsing JSON and URL-encoded data.
+- Implement logging for monitoring application behavior and debugging.
+- Use async/await for handling asynchronous operations cleanly.
+- Avoid using deprecated features and keep the codebase updated.
+- Use the latest stable version of Express to benefit from performance improvements and security patches.
+- Leverage built-in middleware like express.json() and express.urlencoded() for parsing request bodies.
+- Utilize router-level middleware to apply specific middleware to certain routes.
+- Use the Router class to modularize routes and keep your code organized.
+- Avoid using synchronous code in your routes to prevent blocking the event loop.
+- Use environment variables for configuration settings.
+- Leverage built-in middleware for parsing JSON and URL-encoded data.
+- Always validate user input to prevent security vulnerabilities.
+
+# Code Style and Structure
+
+- Follow a consistent naming convention for routes and handlers.
+- Keep route handlers small and focused on a single task.
+- Use comments to document complex logic within route handlers.
+- Follow consistent naming conventions for files and directories.
+- Use modular design to separate concerns and improve code readability.
+- Document code with comments and JSDoc for better understanding.
+- Use consistent indentation and formatting for better readability.
+- Keep functions small and focused on a single task.
+- Follow consistent naming conventions for routes and middleware to enhance readability.
+- Keep route handlers concise; delegate complex logic to separate functions or modules.
+- Use comments to document the purpose of middleware and route handlers for better maintainability.
+- Use consistent naming conventions for routes and middleware.
+- Keep route handlers small and focused on a single responsibility.
+- Use async/await for handling asynchronous operations in route handlers.
+- Document your API endpoints using tools like Swagger or JSDoc.
+- Keep your route definitions organized and grouped by functionality.
+- Use async/await for handling asynchronous operations to improve readability.

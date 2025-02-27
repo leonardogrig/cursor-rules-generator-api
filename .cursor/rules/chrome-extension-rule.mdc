@@ -1,0 +1,397 @@
+---
+description: chrome-extension configuration and usage guidelines
+globs: 
+---
+
+# Accessibility
+
+- Implement ARIA labels
+- Ensure sufficient color contrast
+- Support screen readers
+- Add keyboard shortcuts
+
+# Testing and Debugging
+
+- Use Chrome DevTools effectively
+- Write unit and integration tests
+- Test cross-browser compatibility
+- Monitor performance metrics
+- Handle error scenarios
+- Test your filtering rules thoroughly to ensure they work as expected.
+- Monitor performance metrics to avoid slowing down the browser.
+- Handle error scenarios gracefully to improve user experience.
+- Use Chrome DevTools to inspect and debug your extension.
+- Test your extension in incognito mode to ensure it behaves correctly.
+- Monitor performance metrics to optimize loading times.
+- Use Chrome DevTools effectively for debugging.
+- Write unit and integration tests for your extension.
+- Monitor performance metrics to identify issues.
+- Handle error scenarios gracefully.
+- Utilize Chrome DevTools for debugging
+- Implement unit tests for core extension functionality
+- Use Chrome's built-in extension loading for testing during development
+
+# TypeScript Integration
+
+- Use strict typing for better safety
+- Define proper interfaces
+- Leverage type inference where possible
+
+# Performance and Functionality
+
+- Add end-to-end tests using testing libraries like Puppeteer
+- Conduct thorough manual testing across different browser versions and OSs
+- Avoid common performance pitfalls like back/forward cache invalidation
+- Ensure your extension does not prevent caching
+- Test if your extension invalidates the cache
+- Conduct thorough manual testing across different browsers and OSs.
+- Avoid performance pitfalls like back/forward cache invalidation.
+- Use end-to-end tests with libraries like Puppeteer.
+- Optimize code to prevent cache invalidation.
+
+# User Experience
+
+- Provide a simple, intuitive, and seamless user interface
+- Start onboarding users with screenshots and videos
+- Support Sign in with Google for better user experience
+- Design a persistent UI that enhances browsing without distraction
+- Communicate clearly what the extension does in the store listing
+- Provide clear documentation for users on how to create custom rules.
+- Ensure that the filtering process does not interfere with normal browsing.
+- Avoid synchronous access to database resources to enhance user experience.
+- Use 'fetch()' for network requests instead of 'XMLHttpRequest()' for better performance.
+- Provide a simple and intuitive user interface.
+- Start onboarding users with screenshots and videos.
+- Design a persistent UI that enhances user experience.
+- Support Sign in with Google for easier user login.
+
+# Store Listing
+
+- Create a compelling store listing to attract users
+- Include all required images and ensure they are high quality
+- Choose the most appropriate category for your extension
+- Follow branding guidelines when designing your listing
+- Keep the privacy policy accurate and up-to-date
+- Create a compelling store listing to attract users.
+- Include all required images and ensure they are high quality.
+- Choose the most appropriate category for your extension.
+- Follow branding guidelines when designing your listing.
+
+# General Guidelines
+
+- Research and understand the Chrome Web Store policies before developing a Chrome extension.
+- Extensions should add value to the Chrome Web Store; ensure your extension is useful and unique.
+- Do not attempt to mislead users or manipulate reviews; violations can lead to a ban.
+- Adhere to strict guidelines regarding user data collection and obtain user consent for any data usage.
+- Keep all extension information and metadata up to date and accurate.
+
+# Testing and Quality Assurance
+
+- Test your extensions for crashes, broken features, and bugs prior to submission.
+- Verify that your contact information is correct to receive important communications from the Chrome Web Store.
+- Include detailed information in the single purpose field regarding your extension’s primary functionality.
+- Provide meaningful customer support for your extension.
+- Monitor for updates to Chrome Web Store policies and ensure compliance.
+
+# User Privacy and Data Handling
+
+- Carefully adhere to guidelines regarding the collection, use, and disclosure of user data.
+- Ensure compliance with additional policies if accessing sensitive user data.
+- Obtain user consent for any data collection or usage, especially for sensitive information.
+
+# Extension Metadata and Publishing
+
+- Ensure all information provided in the developer dashboard is accurate at the time of publishing.
+- Keep your extension's metadata updated, including data collection certifications and item category.
+- Be aware that Chrome Web Store policies are subject to change and stay informed about updates.
+
+# User Interface Design
+
+- Support accessibility
+- Use favicons
+- Localize your extension
+- Notify users
+- Extend DevTools
+- Use simple and clear icons
+- Design an intuitive flow
+- Provide helpful instructional text
+- Allow for customization
+- Avoid clutter
+
+# Web Platform Usage
+
+- Handle files on Chrome OS
+- Add geolocation to retrieve the user's location
+- Record audio and capture the screen
+- Use WebSockets in service workers
+- Use WebUSB in extensions
+
+# API Integration
+
+- Use Google Analytics 4
+- Use OAuth 2.0 to authenticate users with Google
+
+# Privacy and Security
+
+- Use eval() in sandboxed iframes
+
+# Distribution
+
+- Self-host an extension
+- Use alternate installation methods
+
+# Testing and Debugging Extensions
+
+- Test Chrome Extensions with Puppeteer
+- Build end-to-end tests
+- Write unit tests
+
+# Account Security
+
+- Set up strong 2-Factor Authentication with a security key on accounts.
+- Use the Advanced Protection Program to prevent targeted attacks.
+
+# Publishing Practices
+
+- Use group publishing to manage extension owners.
+- Avoid using personal email addresses for publishing extensions.
+
+# Compliance and Updates
+
+- Regularly read the Developer Guide to stay updated.
+- Monitor Chrome releases for security and privacy requirements.
+
+# Development Environment
+
+- Develop in the Chrome Canary channel to identify breaking changes early.
+- Subscribe to the Chromium Extensions Google Group for updates.
+
+# Text
+
+- Keep item title clear and descriptive.
+- Ensure item summary highlights key features.
+- Make item description concise and informative.
+
+# Images
+
+- Use clear and high-quality screenshots.
+- Ensure promotional images are uncluttered and professional.
+- Maintain consistent branding across all images.
+
+# General Best Practices
+
+- Create a compelling and accurate store listing page.
+- Focus on user trust and first impressions.
+- Ensure intuitive setup and onboarding flow.
+
+# Promotional Strategies
+
+- Avoid misleading claims in promotional images.
+- Use saturated colors for better visibility.
+- Keep promotional images simple and clean.
+
+# Content Filtering Best Practices
+
+- Use the `chrome.declarativeNetRequest` API for filtering network requests.
+- Bundle static filter rules with your extension to optimize performance.
+- Dynamically add filter rules at runtime for flexibility.
+- Allow users to define their own filtering rules through a UI.
+- Utilize content scripts to filter elements directly on web pages.
+
+# Architecture and Best Practices
+
+- Organize static rules into different rulesets for better management.
+- Limit the number of static and dynamic rules to stay within Chrome's limits.
+- Use asynchronous analysis of web requests to avoid performance issues.
+- Strictly follow Manifest V3 specifications
+- Divide responsibilities between background, content scripts and popup
+- Configure permissions following the principle of least privilege
+- Use modern build tools (webpack/vite) for development
+- Implement proper version control and change management
+
+# Notifications API Best Practices
+
+- Use appropriate notification types (basic, image, list, progress)
+- Include action items for user interaction
+- Set notification priorities wisely
+- Listen for user actions with event listeners
+- Consider using service workers for background notifications
+
+# Best Practices
+
+- Ensure your page is fast and lightweight.
+- Provide a title for your page to avoid confusion.
+- Remember that the keyboard focus is initially on the address bar in new tabs.
+- Design the new tab page to be distinct from Chrome's default new tab page.
+
+# Manifest Configuration
+
+- Register your override page in the extension manifest using 'chrome_url_overrides'.
+- Use the correct keys for the pages you want to override: 'bookmarks', 'history', or 'newtab'.
+
+# Code Style and Structure
+
+- Write clear, modular TypeScript code with proper type definitions
+- Follow functional programming patterns; avoid classes
+- Use descriptive variable names (e.g., isLoading, hasPermission)
+- Structure files logically: popup, background, content scripts, utils
+- Implement proper error handling and logging
+- Write concise, technical JavaScript/TypeScript code with accurate examples
+- Use modern JavaScript features and best practices
+- Prefer functional programming patterns; minimize use of classes
+- Use descriptive variable names (e.g., isExtensionEnabled, hasPermission)
+- Structure files: manifest.json, background scripts, content scripts, popup scripts, options page
+
+# Chrome API Usage
+
+- Use chrome.* APIs correctly (storage, tabs, runtime, etc.)
+- Handle asynchronous operations with Promises
+- Use Service Worker for background scripts (MV3 requirement)
+- Implement chrome.alarms for scheduled tasks
+- Use chrome.action API for browser actions
+
+# Security and Privacy
+
+- Implement Content Security Policy (CSP)
+- Handle user data securely
+- Prevent XSS and injection attacks
+- Use secure messaging between components
+- Handle cross-origin requests safely
+- Implement Content Security Policy (CSP) in manifest.json
+- Use HTTPS for all network requests
+- Sanitize user inputs and validate data from external sources
+- Implement proper error handling and logging
+
+# Performance and Optimization
+
+- Minimize resource usage and avoid memory leaks
+- Optimize background script performance
+- Implement proper caching mechanisms
+- Handle asynchronous operations efficiently
+- Monitor and optimize CPU/memory usage
+
+# UI and User Experience
+
+- Follow Material Design guidelines
+- Implement responsive popup windows
+- Provide clear user feedback
+- Support keyboard navigation
+- Ensure proper loading states
+
+# Internationalization
+
+- Use chrome.i18n API for translations
+- Follow _locales structure
+- Support RTL languages
+- Handle regional formats
+
+# Publishing and Maintenance
+
+- Prepare store listings and screenshots
+- Write clear privacy policies
+- Implement update mechanisms
+- Handle user feedback
+- Maintain documentation
+
+# Follow Official Documentation
+
+- Refer to Chrome Extension documentation
+- Stay updated with Manifest V3 changes
+- Follow Chrome Web Store guidelines
+- Monitor Chrome platform updates
+
+# Compliance and Security
+
+- Adhere to developer program policies to avoid violations.
+- Ensure user data is sent securely via HTTPS.
+- Avoid deceptive installation tactics.
+- Disclose user data collection practices in the Privacy tab.
+
+# Security Best Practices
+
+- Request minimal permissions
+- Regularly audit code
+- Follow security guidelines
+
+# Development Guidelines
+
+- Use the principle of least privilege
+- Conduct thorough testing across multiple browsers
+- Ensure manifest.json is accurately configured
+- Include detailed descriptions and visuals in the extension package
+
+# Best Practices in Extension Development
+
+- Minimize permissions
+- Validate all inputs
+- Use identifier best practices
+- Enable CSP
+- Undergo security audits
+
+# Performance Optimization
+
+- Minify resources
+- Enable compression
+- Limit blocking calls
+- Debounce rapid events
+- Use Chrome extension APIs
+- Minimize resource usage in background scripts
+- Use event pages instead of persistent background pages when possible
+- Implement lazy loading for non-critical extension features
+- Optimize content scripts to minimize impact on web page performance
+
+# Naming Conventions
+
+- Use lowercase with underscores for file names (e.g., content_script.js, background_worker.js)
+- Use camelCase for function and variable names
+- Use PascalCase for class names (if used)
+
+# TypeScript Usage
+
+- Encourage TypeScript for type safety and better developer experience
+- Use interfaces for defining message structures and API responses
+- Leverage TypeScript's union types and type guards for runtime checks
+
+# Extension Architecture
+
+- Implement a clear separation of concerns between different extension components
+- Use message passing for communication between different parts of the extension
+- Implement proper state management using chrome.storage API
+
+# Manifest and Permissions
+
+- Use the latest manifest version (v3) unless there's a specific need for v2
+- Follow the principle of least privilege for permissions
+- Implement optional permissions where possible
+
+# UI and Styling
+
+- Create responsive designs for popup and options pages
+- Use CSS Grid or Flexbox for layouts
+- Implement consistent styling across all extension UI elements
+
+# Browser API Usage
+
+- Utilize chrome.* APIs effectively (e.g., chrome.tabs, chrome.storage, chrome.runtime)
+- Implement proper error handling for all API calls
+- Use chrome.alarms for scheduling tasks instead of setInterval
+
+# Cross-browser Compatibility
+
+- Use WebExtensions API for cross-browser support where possible
+- Implement graceful degradation for browser-specific features
+
+# Context-Aware Development
+
+- Always consider the whole project context when providing suggestions or generating code
+- Avoid duplicating existing functionality or creating conflicting implementations
+- Ensure that new code integrates seamlessly with the existing project structure and architecture
+- Before adding new features or modifying existing ones, review the current project state to maintain consistency and avoid redundancy
+- When answering questions or providing solutions, take into account previously discussed or implemented features to prevent contradictions or repetitions
+
+# Code Output
+
+- When providing code, always output the entire file content, not just new or modified parts
+- Include all necessary imports, declarations, and surrounding code to ensure the file is complete and functional
+- Provide comments or explanations for significant changes or additions within the file
+- If the file is too large to reasonably include in full, provide the most relevant complete section and clearly indicate where it fits in the larger file structure

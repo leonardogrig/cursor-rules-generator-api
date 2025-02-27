@@ -98,7 +98,10 @@ export const generateRules = async (
         logger.info(
           `Extracting best practices and tips from ${packageName} documentation...`
         );
-        const extractResult = await firecrawlService.extract(firstUrl);
+        const extractResult = await firecrawlService.extract(
+          firstUrl,
+          packageName
+        );
 
         // Log the result at debug level
         logger.debug(

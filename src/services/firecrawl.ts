@@ -82,8 +82,17 @@ class FirecrawlService {
   /**
    * Extract rules from documentation URL
    */
-  async extract(url: string): Promise<ExtractResponse> {
+  async extract(url: string, packageName?: string): Promise<ExtractResponse> {
     try {
+      // Extract package name from URL if not provided
+      if (!packageName) {
+        // Remove trailing slash if present to avoid //
+        const cleanUrl = url.endsWith("/") ? url.slice(0, -1) : url;
+        // Try to extract package name from URL path
+        const urlParts = cleanUrl.split("/");
+        packageName = urlParts[urlParts.length - 1] || "unknown";
+      }
+
       // Ensure URL ends with /* for comprehensive crawling
       let crawlUrl = url;
       if (!crawlUrl.endsWith("/*")) {
@@ -93,8 +102,14 @@ class FirecrawlService {
         crawlUrl += "/*";
       }
 
+      // Add Cursor Directory URL as an additional source
+      const cursorDirectoryUrl = "https://cursor.directory/*";
+
       logger.info(`Starting extraction process from documentation at: ${url}`);
-      logger.debug(`Using crawl URL: "${crawlUrl}"`);
+      logger.info(`Also searching Cursor Directory for relevant information`);
+      logger.debug(
+        `Using crawl URLs: "${crawlUrl}" and "${cursorDirectoryUrl}"`
+      );
       const startTime = Date.now();
 
       // STEP 1: Initiate the extraction job
@@ -102,8 +117,8 @@ class FirecrawlService {
       const initiateResponse = await axios.post(
         `${this.baseUrl}/extract`,
         {
-          urls: [crawlUrl],
-          prompt: `I need general tips and best practices for using this package. These tips will be used as context for a code editor to generate code, this is not for a human user, so be objective and concise. Do not be verbose since it should only cover overall tips to use the specific package. Group your tips into relevant categories (like "Architecture and Best Practices", "usage guidelines", "Code style and structure", etc.). 
+          urls: [crawlUrl, cursorDirectoryUrl],
+          prompt: `Fetch for rules related to ${packageName}. I need general tips and best practices for using this package. These tips will be used as context for a code editor to generate code, this is not for a human user, so be objective and concise. Do not be verbose since it should only cover overall tips to use the specific package. Group your tips into relevant categories (like "Architecture and Best Practices", "usage guidelines", "Code style and structure", etc.). The final output should not be so large, only the essentials.
 
 For each category, include at least 2-5 practical tips focused on common usage patterns. Format your response as follows:
 

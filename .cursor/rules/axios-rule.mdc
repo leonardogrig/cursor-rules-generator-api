@@ -1,0 +1,88 @@
+---
+description: axios configuration and usage guidelines
+globs: 
+---
+
+# Architecture and Best Practices
+
+- Avoid hardcoding URLs by configuring a base URL and creating an Axios instance.
+- Centralize API logic by creating a service layer to manage API interactions.
+- Use request interceptors to add common configurations like authentication tokens.
+- Utilize the single responsibility principle for API calls.
+- Apply the DRY principle to avoid code duplication.
+- Use Axios interceptors for handling requests and responses cleanly.
+- Set up separate Axios clients for different API services.
+- Organize your API calls in a structured folder hierarchy.
+- Utilize the single responsibility principle for each function.
+
+# Error Handling
+
+- Handle errors gracefully by creating a centralized error handling mechanism.
+- Log errors consistently to aid in debugging and provide meaningful messages to users.
+- Use .catch() to handle errors in promise chains.
+- Check error.response for server-side errors and error.request for network issues.
+- Implement retries for transient errors using axios-retry or custom logic.
+- Ensure consistent error handling to provide meaningful messages and logs.
+
+# Code Structure and Readability
+
+- Use async/await for cleaner and more readable asynchronous code.
+- Keep components focused on UI logic by centralizing API calls in a service layer.
+
+# Performance Optimization
+
+- Ensure HTTP requests are made only when necessary, especially in development environments.
+- Optimize API calls by managing headers and configurations centrally.
+
+# Usage Guidelines
+
+- Install Axios via npm or yarn for easy management.
+- Use axios.create to set default configurations for your API client.
+- Handle errors gracefully using interceptors to manage unauthorized access.
+- Export your Axios client for use across your application.
+- Use async/await for cleaner asynchronous code when making API calls.
+- Use axios.create to set default configurations for your API calls.
+- Implement error handling in interceptors to manage unauthorized access.
+
+# Code Style and Structure
+
+- Keep API handler functions concise and focused on a single task.
+- Use meaningful names for API endpoints and functions.
+- Ensure consistent formatting and indentation in your code.
+- Document your API functions for better maintainability.
+- Use JSON.stringify for request payloads when necessary.
+- Structure your API calls to enhance readability and maintainability.
+- Comment on complex logic to improve understanding for future developers.
+
+# General Usage Tips
+
+- Use Axios for promise-based HTTP requests to simplify async operations.
+- Leverage automatic JSON parsing to reduce boilerplate code.
+- Utilize interceptors for modifying requests and responses globally.
+- Implement error handling to catch and manage HTTP errors effectively.
+
+# Request Configuration
+
+- Set a base URL for all requests to avoid repetition.
+- Use timeout settings to prevent hanging requests.
+- Configure headers globally for consistent API communication.
+- Utilize query parameters for dynamic data fetching.
+- Optimize with request interceptors to manage common configurations like authentication tokens.
+- Ensure HTTP requests are configured correctly for local development.
+
+# Advanced Features
+
+- Use axios.all() and axios.spread() for concurrent requests.
+- Create custom Axios instances for different configurations.
+- Handle file uploads with FormData easily.
+
+# Testing and Debugging
+
+- Use console logging to debug request and response data.
+- Implement unit tests for API calls to ensure reliability.
+- Use tools like Postman to test API endpoints before integration.
+
+# Asynchronous Programming
+
+- Use async/await for cleaner and more readable asynchronous code.
+- Reduce nesting of .then calls to improve readability.
