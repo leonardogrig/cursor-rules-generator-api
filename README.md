@@ -9,6 +9,8 @@ A Node.js API service that generates rules for packages based on their documenta
 - Uses Firecrawl to search for and extract documentation
 - Returns structured rules data in a consistent format
 
+run: node generate-cursor-rules.js "package_name" to generate the rule for that specific package. Or leave this out to generate based on the package.json
+
 ## API Endpoints
 
 ### Generate Rules
