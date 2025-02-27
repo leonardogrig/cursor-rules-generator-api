@@ -13,14 +13,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Simple table for messages
-model Message {
-  id        Int      @id @default(autoincrement())
-  content   String
-  createdAt DateTime @default(now())
-}
-
-// Package documentation rules with categorized instructions
 model PackageRule {
   id          Int                   @id @default(autoincrement())
   packageName String                @unique
@@ -30,7 +22,6 @@ model PackageRule {
   updatedAt   DateTime              @updatedAt
 }
 
-// Category of instructions
 model InstructionCategory {
   id            Int         @id @default(autoincrement())
   name          String
